@@ -4,10 +4,10 @@ Ansible is an open-source automation platform. It is very, very simple to set up
 
 ### Pre-requisites
 
-1. A GCP VM instance (on Control node)
+1. a GCP VM instance (on Control node)
 
 ### Installation steps:
-#### on Amazon EC2 instance
+#### on GCP VM instance
 
 1. Install python and python-pip
    ```sh
@@ -61,7 +61,7 @@ Ansible is an open-source automation platform. It is very, very simple to set up
 
    ```
 1. Create a directory /etc/ansible and create an inventory file called "hosts" add control node and managed hosts IP addresses to it. 
-  ```sh
+   ```sh
    cd /etc/ansible
    vi hosts
    ```
