@@ -61,11 +61,19 @@ Ansible is an open-source automation platform. It is very, very simple to set up
 
    ```
 1. Create a directory /etc/ansible and create an inventory file called "hosts" add control node and managed hosts IP addresses to it. 
+  ```sh
+   cd /etc/ansible
+   vi hosts
+   ```
+   For localhost (controller), it doesn't need to connect via SSH, so add this to the file:
+   ```sh
+   localhost ansible_connection=local
+   ```
  
 ### Validation test
 
    
-1. Run ansible command as ansadmin user it should be successful (Master)
+1. Run ansible command as ansibleadmin user it should be successful (Master)
    ```sh 
    ansible all -m ping
    ```
