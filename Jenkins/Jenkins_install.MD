@@ -1,4 +1,4 @@
-# Install Jenkins on AWS EC2
+# Install Jenkins on GCP VM Instance
 Jenkins is a leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project
 
 
@@ -34,11 +34,11 @@ First access the bash as a root user
 ## Install Jenkins
 1. Get the latest version from https://pkg.jenkins.io/redhat-stable/ and install
    ```sh
-   yum -y install wget
-   sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-   sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-   #Then
-   yum install jenkins
+   wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+   sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \ 
+      /etc/apt/sources.list.d/jenkins.list'
+   sudo apt-get update
+   sudo apt-get install jenkins
    ```
 
    ### Start Jenkins
