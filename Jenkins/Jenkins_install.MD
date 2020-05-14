@@ -3,9 +3,9 @@ Jenkins is a leading open source automation server, Jenkins provides hundreds of
 
 
 ### Prerequisites
-1. EC2 Instance 
+1. VM Instance 
    - With Internet Access
-   - Create a Security Group with Port `8080` open for internet
+   - with Port `8080` open for internet: in the firewall rules
 1. Java v1.8.x 
 
 ## Install Java & add to PATH
