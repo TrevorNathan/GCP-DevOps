@@ -1,4 +1,4 @@
-# Ansible Installation
+# Ansible Installation on GCP VM instance
 
 Ansible is an open-source automation platform. It is very, very simple to set up and yet powerful. Ansible can help you with configuration management, application deployment, task automation.
 
@@ -7,12 +7,18 @@ Ansible is an open-source automation platform. It is very, very simple to set up
 1. a GCP VM instance (on Control node)
 
 ### Installation steps:
-#### on GCP VM instance
+- Setup VM Instance / EC2
+- Setup instance hostname
+- Create ansibleadmin user
+- Add user to sudoers file
+- Generate ssh keys
+- Enable password based login
+- Install Ansible
 
 1. Install python and python-pip
    ```sh
-   yum install python
-   yum install python-pip
+   apt install python
+   apt install python-pip
    ```
    #At times, Python is already installed in the EC2 instance
    
